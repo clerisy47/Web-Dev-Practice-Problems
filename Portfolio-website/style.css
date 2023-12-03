@@ -1,0 +1,159 @@
+body{
+    text-align: center;
+    font-family: "Merriweather", serif;
+}
+.top-container{
+    background-color: #e4f9f5;
+    position: relative;
+}
+p{
+    line-height: 2;
+    font-size: 1.2rem;
+}
+.intro-text{
+    color: #66bfbf;
+    font-size: 5.265 rem;
+    font-family: "Sacramento", cursive; 
+}
+.top-cloud {
+    position: absolute;
+    top: 40px;
+    right: 300px;
+  }
+  .bottom-cloud {
+    position: absolute;
+    left: 250px;
+    bottom: 300px;
+  }
+
+.copyright {
+    color: #e4f9f5;
+    font-size: 0.7rem;
+    padding: 20px 0;
+  }
+h1{
+    color: #66bfbf;
+    font-size: 5.625rem;
+    margin: 50px auto 0 auto;
+    font-family: "Sacramento", cursive;
+}
+h2{
+    color: #66bfbf;
+    font-family: "Montserrat", sans-serif;
+    font-weight: normal;
+    padding-bottom: 10px;
+}
+
+.middle-container{
+    margin-top: 70px;
+}
+.contact-message {
+    margin: 40px auto 60px;
+    font-family: "Montserrat", sans-serif;
+    color: #11999e;
+    width: 60%;
+    margin: 0 auto;
+    font-size: 2 rem;
+  }
+.my-photo{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+}
+.intro-detailed{
+    margin: 35px auto;
+}
+
+hr {
+    border: dotted #b3fdf0 6px;
+    border-bottom: none;
+    width: 4%;
+    margin: 100px auto;
+  }
+
+.footer{
+    background-color: #66bfbf;
+  }
+
+.typing h2 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: 0.15em solid #11999e; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: 0.1em; /* Adjust as needed */
+    animation: typing 3.5s steps(40, end) forwards,
+      blink-caret 0.75s step-end infinite;
+  }
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 40%;
+    }
+  }
+  
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: #11999e;
+    }
+  }
+  .btn {
+    -moz-box-shadow: 0px 8px 13px -7px #11999e;
+    -webkit-box-shadow: 0px 8px 13px -7px #11999e;
+    box-shadow: 0px 8px 13px -7px #11999e;
+    background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      color-stop(0.05, #66bfbf),
+      color-stop(1, #11999e)
+    );
+    background: -moz-linear-gradient(center top, #66bfbf 5%, #11999e 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#66bfbf', endColorstr='#11999e');
+    background-color: #66bfbf;
+    -webkit-border-top-left-radius: 8px;
+    -moz-border-radius-topleft: 8px;
+    border-top-left-radius: 8px;
+    -webkit-border-top-right-radius: 8px;
+    -moz-border-radius-topright: 8px;
+    border-top-right-radius: 8px;
+    -webkit-border-bottom-right-radius: 8px;
+    -moz-border-radius-bottomright: 8px;
+    border-bottom-right-radius: 8px;
+    -webkit-border-bottom-left-radius: 8px;
+    -moz-border-radius-bottomleft: 8px;
+    border-bottom-left-radius: 8px;
+    text-indent: 0;
+    display: inline-block;
+    color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    font-style: normal;
+    height: 49px;
+    line-height: 49px;
+    width: 166px;
+    text-decoration: none;
+    text-align: center;
+  }
+  .btn:hover {
+    background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      color-stop(0.05, #11999e),
+      color-stop(1, #66bfbf)
+    );
+    background: -moz-linear-gradient(center top, #11999e 5%, #66bfbf 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#11999e', endColorstr='#66bfbf');
+    background-color: #11999e;
+  }
+  .btn:active {
+    position: relative;
+    top: 1px;
+  }
