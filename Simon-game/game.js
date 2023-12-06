@@ -1,14 +1,13 @@
 let buttons = ["red", "blue", "green", "yellow"];
 let userPattern = []
 let gamePattern = []
-let level = 0
+let level = 1
 let gameRunning = false
 let levelTitle = document.querySelector("#level-title")
 
 function nextSequence(){
     userPattern = []
-    level++
-    document.querySelector("#level-title").textContent = "Level "+ level
+    document.querySelector("#level-title").textContent = "level "+ level
     let randomNumber = Math.floor(Math.random()*4)
     let randomColor = buttons[randomNumber]
     playAnimation(document.querySelector('#'+ randomColor))
@@ -23,27 +22,30 @@ function playAnimation(button) {
 }
 
 function checkColor() {
-    if (userPattern.length != gamePattern.length){
-        nextSequence()
+    for (let i = 0; i < userPattern.length; i++) {
+        if (userPattern[i] !== gamePattern[i]) {
+            levelTitle.textContent = "Game Over"
+            gameRunning = false
+            level = 1
+            gamePattern = []
+            userPattern = []
+            return
+        }
     }
-    else if (JSON.stringify(userPattern) === JSON.stringify(gamePattern)) {
+
+    if (userPattern.length === gamePattern.length) {
         userPattern = []
         level += 1
-        setTimeout(()=>{
+        setTimeout(() => {
             nextSequence()
-        },1000)
-    } else {
-        levelTitle.textContent = "Game Over"
-        gameRunning = false
-        level = 1
-        userPattern = []
-
+        }, 1000)
     }
 }
 
+
 document.querySelector('body').addEventListener("keydown", () => {
     if (!gameRunning) {
-        levelTitle.textContent = 'Level 1'
+        levelTitle.textContent = 'level'+level
         gameRunning = true
         nextSequence()
     }
@@ -51,9 +53,9 @@ document.querySelector('body').addEventListener("keydown", () => {
 
 for (const button of document.querySelectorAll(".btn")) {
         button.addEventListener("click", () => {
-        playAnimation(button);
-        userPattern.push(button.id);
-        levelTitle.textContent = "level " + level;
-        checkColor();
-    });
+        playAnimation(button)
+        userPattern.push(button.id)
+        levelTitle.textContent = "level " + level
+        checkColor()
+    })
 }
